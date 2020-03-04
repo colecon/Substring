@@ -1,0 +1,22 @@
+//Cole Constantino # of String a to become substring of b
+import java.util.*;
+public class Substring{
+  public static void main(String[] args){
+    Substring a = new Substring();
+      System.out.println(a.subString("abcd","cdabcdab"));
+  }
+  
+  public int subString(String a, String b) {
+    StringBuilder s = new StringBuilder(a);
+    int x;
+    for (x = 1; s.length() < b.length(); x++){
+      s.append(a);
+    }
+    if (s.indexOf(b) >= 0)
+      return x;
+    else if (s.append(a).indexOf(b) >= 0) 
+      return x+1;
+    else
+      return -1;
+  } 
+}
